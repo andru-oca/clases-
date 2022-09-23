@@ -1,5 +1,31 @@
+
+body {
+  --color: #222;
+  --bg-color: #fff;
+}
+body.dark-theme {
+  --color: #eee;
+  --bg-color: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --color: #eee;
+    --bg-color: #121212;
+  }
+  body.light-theme {
+    --color: #222;
+    --bg-color: #fff;
+  }
+}
+
+
+
 body{
     text-align: center;
+    background-color: var(--bg-color);
+    color: var(--color);
 }
 
 .border{
